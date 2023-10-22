@@ -53,4 +53,15 @@ export class SegurosComponent {
         });
   }
 
+  deleteSeguro(seguro : any){
+    alert(seguro.idSeguros)
+    this.seguroService.deleteSeguro(seguro.idSeguros).subscribe(resp=>{
+      if(resp){
+        alert("Se elmino correctamente");
+        this.ngOnInit();
+      }else{
+        alert("No se pudo eliminar el seguro")
+      }
+    });
+  }
 }

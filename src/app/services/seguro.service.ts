@@ -53,4 +53,14 @@ export class SegurosService {
     const headers = new HttpHeaders().set('content-type', 'application/json')
     return this.httpclient.get<string>(this.urlBase + this.controladorSeguro + 'GetFormato');
   }
+
+  deleteSeguro(id:number){
+    const seguro = {
+      id
+    }
+    let params = new HttpParams()
+      .append("id", seguro.id)
+    const headers = new HttpHeaders().set('content-type', 'application/json')
+    return this.httpclient.post<any>(this.urlBase+this.controladorSeguro+'DeleteSeguro',seguro, { headers, params });
+  }
 }

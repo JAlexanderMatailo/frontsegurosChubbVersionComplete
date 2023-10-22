@@ -72,6 +72,11 @@ export class RegistrarPolizaComponent {
     this.getPolizas()
   }
 
+  filtrarNumeros(event: any) {
+    const input = event.target;
+    input.value = input.value.replace(/[^0-9]/g, '');
+  }
+
   getPersonaByCedula(){
     this.personSelected.cedula = this.cedula;
     this.personaService.getPersonaByCedula(this.personSelected.cedula).subscribe(resp=>{

@@ -7,7 +7,7 @@
   </div>
   <div class="row mt-2">
     <div class="col-5 mt-2">
-      <input class="w-100 h-100" type="text" placeholder="Ingrese numero de cédula"  [(ngModel)]="cedula" [ngModelOptions]="{standalone: true}" maxlength="10">
+      <input class="w-100 h-100" type="text" (input)="filtrarNumeros($event)" placeholder="Ingrese numero de cédula"  [(ngModel)]="cedula" [ngModelOptions]="{standalone: true}" maxlength="10">
     </div>
     <div class="col-2 mt-2">
       <button class="btn btn-primary" (click)="getPersonaByCedula()">Buscar</button>

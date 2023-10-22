@@ -30,11 +30,16 @@ export class PersonaService {
     return this.httpClient.post<any>(this.urlBase+this.controladorPersona+'SetPersona',datosCliente);
   }
   UpdatePersona(datosCliente:any){
-
     return this.httpClient.post<any>(this.urlBase+this.controladorPersona+'UpdatePersona',datosCliente);
   }
-  deletePersona(datosCliente:any){
-    return this.httpClient.post<any>(this.urlBase+this.controladorPersona+'DeletePersona',datosCliente);
+  deletePersona(id:number){
+    const persona = {
+      id
+    }
+    let params = new HttpParams()
+      .append("id", persona.id)
+    const headers = new HttpHeaders().set('content-type', 'application/json')
+    return this.httpClient.post<any>(this.urlBase+this.controladorPersona+'DeletePersona',persona, { headers, params });
   }
 
   SetExcel(ArchivoExcel:string){

@@ -10,6 +10,7 @@
         <th scope="col">Valor Asegurado</th>
         <th scope="col">Prima</th>
         <th scope="col">Editar</th>
+        <th scope="col">Eliminar</th>
       </tr>
     </thead>
     <tbody>
@@ -20,6 +21,7 @@
         <td>{{item.sumaAsegurada | currency}}</td>
         <td>{{item.prima | currency}}</td>
         <td><button class="btn btn-success"  (click)="editarSeguro(item)">Editar</button></td>
+        <td><button class="btn btn-danger" (click)="deleteSeguro(item)">Eliminar</button></td>
       </tr>
     </tbody>
   </table>

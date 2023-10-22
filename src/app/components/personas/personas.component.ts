@@ -61,7 +61,7 @@ export class PersonasComponent {
   }
   eliminarPersona(person : any){
     alert(person.idAsegurados)
-    this.personaService.deletePersona(person).subscribe(resp=>{
+    this.personaService.deletePersona(person.idAsegurados).subscribe(resp=>{
       if(resp){
         alert("Se elmino correctamente");
         this.ngOnInit();
