@@ -9,7 +9,7 @@ import { SegurosComponent } from './components/seguros/seguros.component';
 import { RegistrarPersonaComponent } from './components/registrar-persona/registrar-persona.component';
 import { RegistrarSeguroComponent } from './components/registrar-seguro/registrar-seguro.component';
 import { MenuComponent } from './components/menu/menu.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+//import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegistrarPolizaComponent } from './components/registrar-poliza/registrar-poliza.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -17,6 +17,7 @@ import {MatDialogModule}from '@angular/material/dialog';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
